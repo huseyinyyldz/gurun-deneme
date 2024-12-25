@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gürün Tarihçesi - Gürün Belediyesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tarihçe Sayfası Özel Stilleri */
+        .history-section {
+            padding: 6rem 0;
+            background: var(--light-bg);
+        }
+
+        .history-content {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .history-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        .history-content p {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .history-image {
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            transition: all 0.5s ease;
+        }
+
+        .history-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary-color);
+            top: 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 30px);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -40px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            left: -130px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            right: -130px;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .historical-places {
+            margin-top: 4rem;
+        }
+
+        .place-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .place-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .place-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .place-card:hover .place-image img {
+            transform: scale(1.1);
+        }
+
+        .place-content {
+            padding: 2rem;
+        }
+
+        .place-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .place-content p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-more i {
+            transition: all 0.3s ease;
+        }
+
+        .btn-more:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-more:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Gürün Belediyesi Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Başkan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="baskan-ozgecmis.html">Özgeçmiş</a></li>
+                            <li><a class="dropdown-item" href="baskan-mesaj.html">Başkanın Mesajı</a></li>
+                            <li><a class="dropdown-item" href="baskan-galeri.html">Foto Galeri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Kurumsal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kurumsal-yonetim.html">Yönetim</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-teskilat.html">Teşkilat Şeması</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-mevzuat.html">Mevzuat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bilgi-kent.html">Kent Bilgisi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-rehber.html">Kent Rehberi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-projeler.html">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hizmet-online.html">Online İşlemler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-sosyal.html">Sosyal Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-yardim.html">Yardım Masası</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Gürün'ü Tanıyalım
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gurun-tarihce.html">Tarihçe</a></li>
+                            <li><a class="dropdown-item" href="gurun-turizm.html">Turizm</a></li>
+                            <li><a class="dropdown-item" href="gurun-kultur.html">Kültür</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-contact d-none d-lg-flex">
+                <a href="tel:4440058" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    444 0 058
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık Bölümü -->
+    <section class="page-header" style="background-image: url('https://picsum.photos/1920/400?random=57');">
+        <div class="container">
+            <h1 data-aos="fade-up">Gürün Tarihçesi</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Gürün'ü Tanıyalım</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tarihçe</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Tarihçe İçeriği -->
+    <section class="history-section">
+        <div class="container">
+            <!-- Genel Tarihçe -->
+            <div class="history-content" data-aos="fade-up">
+                <h2>Gürün'ün Tarihi</h2>
+                <div class="history-image">
+                    <img src="https://picsum.photos/1200/600?random=58" alt="Tarihi Gürün">
+                </div>
+                <p>Gürün, tarihi M.Ö. 2000'li yıllara dayanan köklü bir yerleşim yeridir. Hitit, Roma, Bizans, Selçuklu ve Osmanlı dönemlerinde önemli bir yerleşim merkezi olan Gürün, tarihi İpek Yolu üzerinde bulunması nedeniyle ticaret ve kültür açısından zengin bir mirasa sahiptir.</p>
+                <p>Şehrin adının kökeni hakkında çeşitli rivayetler bulunmaktadır. Bunlardan en yaygın olanı, bölgenin coğrafi yapısından dolayı "korunaklı yer" anlamına gelen "Gürün" isminin verilmiş olmasıdır.</p>
+                <p>Gürün, tarih boyunca farklı medeniyetlere ev sahipliği yapmış, her dönemde kendi kültürel zenginliğini koruyarak günümüze kadar gelmiştir. Şehir, özellikle Selçuklu ve Osmanlı dönemlerinde önemli bir ticaret ve kültür merkezi olarak öne çıkmıştır.</p>
+            </div>
+
+            <!-- Tarih Şeridi -->
+            <div class="timeline" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">M.Ö. 2000</span>
+                        <h3>Hitit Dönemi</h3>
+                        <p>Bölgede ilk yerleşimlerin başladığı dönem. Hitit İmparatorluğu'nun önemli yerleşim yerlerinden biri.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">M.S. 395</span>
+                        <h3>Roma-Bizans Dönemi</h3>
+                        <p>Roma İmparatorluğu'nun bölünmesinden sonra Doğu Roma (Bizans) hakimiyetine giren Gürün, önemli bir ticaret merkezi haline geldi.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1071</span>
+                        <h3>Selçuklu Dönemi</h3>
+                        <p>Malazgirt Zaferi'nden sonra Türk hakimiyetine giren Gürün, Selçuklu döneminde kültür ve ticaret merkezi olarak gelişti.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1517</span>
+                        <h3>Osmanlı Dönemi</h3>
+                        <p>Yavuz Sultan Selim döneminde Osmanlı topraklarına katılan Gürün, önemli bir kaza merkezi olarak varlığını sürdürdü.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">1923</span>
+                        <h3>Cumhuriyet Dönemi</h3>
+                        <p>Türkiye Cumhuriyeti'nin kuruluşuyla birlikte modern bir ilçe kimliği kazanan Gürün, günümüze kadar gelişimini sürdürdü.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarihi Yerler -->
+            <div class="historical-places">
+                <h2 class="text-center mb-5" data-aos="fade-up">Tarihi Yerler</h2>
+                <div class="row">
+                    <!-- Tarihi Yer 1 -->
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="place-card">
+                            <div class="place-image">
+                                <img src="https://picsum.photos/800/600?random=59" alt="Tarihi Kale">
+                            </div>
+                            <div class="place-content">
+                                <h3>Gürün Kalesi</h3>
+                                <p>Roma döneminden kalma tarihi kale, şehrin en önemli tarihi yapılarından biridir.</p>
+                                <a href="#" class="btn-more">
+                                    Detaylı Bilgi <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarihi Yer 2 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="place-card">
+                            <div class="place-image">
+                                <img src="https://picsum.photos/800/600?random=60" alt="Tarihi Cami">
+                            </div>
+                            <div class="place-content">
+                                <h3>Ulu Cami</h3>
+                                <p>Selçuklu döneminden kalma tarihi cami, özgün mimarisi ile dikkat çekmektedir.</p>
+                                <a href="#" class="btn-more">
+                                    Detaylı Bilgi <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarihi Yer 3 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="place-card">
+                            <div class="place-image">
+                                <img src="https://picsum.photos/800/600?random=61" alt="Tarihi Köprü">
+                            </div>
+                            <div class="place-content">
+                                <h3>Tarihi Köprü</h3>
+                                <p>Osmanlı döneminden kalma tarihi köprü, şehrin simgelerinden biri haline gelmiştir.</p>
+                                <a href="#" class="btn-more">
+                                    Detaylı Bilgi <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info">
+                        <img src="assets/images/logo-white.png" alt="Gürün Belediyesi Logo" class="footer-logo">
+                        <p>Gürün Belediyesi olarak halkımıza hizmet etmekten gurur duyuyoruz.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Hızlı Erişim</h4>
+                        <ul>
+                            <li><a href="#">E-Belediye</a></li>
+                            <li><a href="#">Bilgi Edinme</a></li>
+                            <li><a href="#">İhale İlanları</a></li>
+                            <li><a href="#">Projeler</a></li>
+                            <li><a href="#">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4>İletişim Bilgileri</h4>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Gürün Belediyesi, Merkez Mahallesi
+                            Gürün/Sivas
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            0346 715 10 01
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            info@gurun.bel.tr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    &copy; 2023 Gürün Belediyesi. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+        // Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader-wrapper').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 300);
+            }, 2000);
+        });
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kent Rehberi - Gürün Belediyesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Kent Rehberi Özel Stilleri */
+        .city-guide {
+            padding: 6rem 0;
+        }
+
+        .guide-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .guide-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .guide-card:hover .guide-image img {
+            transform: scale(1.1);
+        }
+
+        .guide-content {
+            padding: 2rem;
+        }
+
+        .guide-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .guide-content p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .guide-meta i {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-box .form-control {
+            border-radius: 25px;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--light-bg);
+        }
+
+        .search-box .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .category-list a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(10px);
+        }
+
+        .category-list a i {
+            transition: all 0.3s ease;
+        }
+
+        .category-list a:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Gürün Belediyesi Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Başkan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="baskan-ozgecmis.html">Özgeçmiş</a></li>
+                            <li><a class="dropdown-item" href="baskan-mesaj.html">Başkanın Mesajı</a></li>
+                            <li><a class="dropdown-item" href="baskan-galeri.html">Foto Galeri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Kurumsal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kurumsal-yonetim.html">Yönetim</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-teskilat.html">Teşkilat Şeması</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-mevzuat.html">Mevzuat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bilgi-kent.html">Kent Bilgisi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-rehber.html">Kent Rehberi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-projeler.html">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hizmet-online.html">Online İşlemler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-sosyal.html">Sosyal Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-yardim.html">Yardım Masası</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Gürün'ü Tanıyalım
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gurun-tarihce.html">Tarihçe</a></li>
+                            <li><a class="dropdown-item" href="gurun-turizm.html">Turizm</a></li>
+                            <li><a class="dropdown-item" href="gurun-kultur.html">Kültür</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-contact d-none d-lg-flex">
+                <a href="tel:4440058" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    444 0 058
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık Bölümü -->
+    <section class="page-header" style="background-image: url('https://picsum.photos/1920/400?random=42');">
+        <div class="container">
+            <h1 data-aos="fade-up">Kent Rehberi</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Bilgi</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Kent Rehberi</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Kent Rehberi İçeriği -->
+    <section class="city-guide">
+        <div class="container">
+            <div class="row">
+                <!-- Sol Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Arama Kutusu -->
+                    <div class="search-box" data-aos="fade-up">
+                        <h3>Rehberde Ara</h3>
+                        <input type="text" class="form-control" placeholder="Ne aramıştınız?">
+                    </div>
+
+                    <!-- Kategoriler -->
+                    <div class="guide-card" data-aos="fade-up">
+                        <div class="guide-content">
+                            <h3>Kategoriler</h3>
+                            <ul class="category-list">
+                                <li><a href="#">Resmi Kurumlar <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Sağlık Kuruluşları <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Eğitim Kurumları <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Tarihi Yerler <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Parklar ve Bahçeler <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Oteller <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Restoranlar <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Spor Tesisleri <i class="fas fa-chevron-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ İçerik -->
+                <div class="col-lg-8">
+                    <!-- Öne Çıkan Yerler -->
+                    <div class="guide-card" data-aos="fade-up">
+                        <div class="guide-image">
+                            <img src="https://picsum.photos/800/500?random=43" alt="Gökpınar Gölü">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Gökpınar Gölü</h3>
+                            <p>Eşsiz doğal güzelliği ve berrak suları ile Gürün'ün en önemli turistik mekanlarından biri
+                                olan Gökpınar Gölü, ziyaretçilerine unutulmaz bir deneyim sunuyor.</p>
+                            <div class="guide-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Gürün Merkez</span>
+                                <span><i class="fas fa-clock"></i> 24 Saat Açık</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-card" data-aos="fade-up">
+                        <div class="guide-image">
+                            <img src="https://picsum.photos/800/500?random=44" alt="Subaşı Hanı">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Subaşı Hanı</h3>
+                            <p>Selçuklu döneminden günümüze ulaşan tarihi Subaşı Hanı, dönemin mimari özelliklerini
+                                yansıtan önemli bir kültür mirası.</p>
+                            <div class="guide-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Tarihi Merkez</span>
+                                <span><i class="fas fa-clock"></i> 09:00 - 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-card" data-aos="fade-up">
+                        <div class="guide-image">
+                            <img src="https://picsum.photos/800/500?random=45" alt="Kent Parkı">
+                        </div>
+                        <div class="guide-content">
+                            <h3>Kent Parkı</h3>
+                            <p>Modern dinlenme alanları, çocuk oyun grupları ve yeşil alanlarıyla Kent Parkı, aileler
+                                için ideal bir dinlenme mekanı.</p>
+                            <div class="guide-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Şehir Merkezi</span>
+                                <span><i class="fas fa-clock"></i> 24 Saat Açık</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sayfalama -->
+                    <nav aria-label="Sayfalama" data-aos="fade-up">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Önceki</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Sonraki</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info">
+                        <img src="assets/images/logo-white.png" alt="Gürün Belediyesi Logo" class="footer-logo">
+                        <p>Gürün Belediyesi olarak halkımıza hizmet etmekten gurur duyuyoruz.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Hızlı Erişim</h4>
+                        <ul>
+                            <li><a href="#">E-Belediye</a></li>
+                            <li><a href="#">Bilgi Edinme</a></li>
+                            <li><a href="#">İhale İlanları</a></li>
+                            <li><a href="#">Projeler</a></li>
+                            <li><a href="#">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4>İletişim Bilgileri</h4>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Gürün Belediyesi, Merkez Mahallesi
+                            Gürün/Sivas
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            0346 715 10 01
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            info@gurun.bel.tr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    &copy; 2023 Gürün Belediyesi. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Loader
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelector('.loader-wrapper').style.opacity = '0';
+                setTimeout(function () {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 300);
+            }, 2000);
+        });
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Arama fonksiyonu
+        document.querySelector('.search-box input').addEventListener('keyup', function (e) {
+            const searchText = e.target.value.toLowerCase();
+            const guideCards = document.querySelectorAll('.guide-card');
+
+            guideCards.forEach(card => {
+                const title = card.querySelector('h3')?.textContent.toLowerCase();
+                const content = card.querySelector('p')?.textContent.toLowerCase();
+
+                if (title?.includes(searchText) || content?.includes(searchText)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

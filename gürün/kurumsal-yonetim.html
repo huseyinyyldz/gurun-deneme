@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetim - Gürün Belediyesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Gürün Belediyesi Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Başkan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="baskan-ozgecmis.html">Özgeçmiş</a></li>
+                            <li><a class="dropdown-item" href="baskan-mesaj.html">Başkanın Mesajı</a></li>
+                            <li><a class="dropdown-item" href="baskan-galeri.html">Foto Galeri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Kurumsal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kurumsal-yonetim.html">Yönetim</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-teskilat.html">Teşkilat Şeması</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-mevzuat.html">Mevzuat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bilgi-kent.html">Kent Bilgisi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-rehber.html">Kent Rehberi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-projeler.html">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hizmet-online.html">Online İşlemler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-sosyal.html">Sosyal Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-yardim.html">Yardım Masası</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Gürün'ü Tanıyalım
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gurun-tarihce.html">Tarihçe</a></li>
+                            <li><a class="dropdown-item" href="gurun-turizm.html">Turizm</a></li>
+                            <li><a class="dropdown-item" href="gurun-kultur.html">Kültür</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-contact d-none d-lg-flex">
+                <a href="tel:4440058" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    444 0 058
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık Bölümü -->
+    <section class="page-header" style="background-image: url('https://picsum.photos/1920/400?random=31');">
+        <div class="container">
+            <h1 data-aos="fade-up">Belediye Yönetimi</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Kurumsal</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Yönetim</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Yönetim Kadrosu -->
+    <section class="management-team">
+        <div class="container">
+            <!-- Başkan -->
+            <div class="team-section" data-aos="fade-up">
+                <h2 class="section-title">Belediye Başkanı</h2>
+                <div class="team-member president">
+                    <div class="member-photo">
+                        <img src="https://picsum.photos/400/500?random=32" alt="Belediye Başkanı">
+                    </div>
+                    <div class="member-info">
+                        <h3>Nami ÇAĞAN</h3>
+                        <p class="position">Gürün Belediye Başkanı</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Başkan Yardımcıları -->
+            <div class="team-section" data-aos="fade-up">
+                <h2 class="section-title">Başkan Yardımcıları</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=33" alt="Başkan Yardımcısı">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ahmet YILMAZ</h3>
+                            <p class="position">Teknik İşlerden Sorumlu Başkan Yardımcısı</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=34" alt="Başkan Yardımcısı">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mehmet KAYA</h3>
+                            <p class="position">Mali İşlerden Sorumlu Başkan Yardımcısı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Müdürler -->
+            <div class="team-section" data-aos="fade-up">
+                <h2 class="section-title">Birim Müdürleri</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=35" alt="Müdür">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ali DEMİR</h3>
+                            <p class="position">Fen İşleri Müdürü</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=36" alt="Müdür">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ayşe YILDIZ</h3>
+                            <p class="position">Mali Hizmetler Müdürü</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=37" alt="Müdür">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mustafa ÖZTÜRK</h3>
+                            <p class="position">İmar ve Şehircilik Müdürü</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="https://picsum.photos/300/400?random=38" alt="Müdür">
+                        </div>
+                        <div class="member-info">
+                            <h3>Fatma ŞAHIN</h3>
+                            <p class="position">Kültür ve Sosyal İşler Müdürü</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meclis Üyeleri -->
+            <div class="team-section" data-aos="fade-up">
+                <h2 class="section-title">Belediye Meclis Üyeleri</h2>
+                <div class="council-members">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Adı Soyadı</th>
+                                    <th>Parti</th>
+                                    <th>Komisyon</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hasan KILIÇ</td>
+                                    <td>AK Parti</td>
+                                    <td>İmar Komisyonu</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeynep ARSLAN</td>
+                                    <td>AK Parti</td>
+                                    <td>Plan ve Bütçe Komisyonu</td>
+                                </tr>
+                                <tr>
+                                    <td>İbrahim GÜNEŞ</td>
+                                    <td>CHP</td>
+                                    <td>Çevre ve Sağlık Komisyonu</td>
+                                </tr>
+                                <!-- Diğer meclis üyeleri -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info">
+                        <img src="assets/images/logo-white.png" alt="Gürün Belediyesi Logo" class="footer-logo">
+                        <p>Gürün Belediyesi olarak halkımıza hizmet etmekten gurur duyuyoruz.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Hızlı Erişim</h4>
+                        <ul>
+                            <li><a href="#">E-Belediye</a></li>
+                            <li><a href="#">Bilgi Edinme</a></li>
+                            <li><a href="#">İhale İlanları</a></li>
+                            <li><a href="#">Projeler</a></li>
+                            <li><a href="#">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4>İletişim Bilgileri</h4>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Gürün Belediyesi, Merkez Mahallesi
+                            Gürün/Sivas
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            0346 715 10 01
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            info@gurun.bel.tr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    &copy; 2023 Gürün Belediyesi. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+        // Loader// Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader-wrapper').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 300);
+            }, 2000);
+        });
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hizmetler - Gürün Belediyesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Online Hizmetler Sayfası Özel Stilleri */
+        .online-services {
+            padding: 6rem 0;
+            background: var(--light-bg);
+        }
+
+        .service-box {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-bg);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover .service-icon {
+            background: var(--primary-color);
+            transform: rotateY(360deg);
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover .service-icon i {
+            color: white;
+        }
+
+        .service-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-box p {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .service-link i {
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: step-counter;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+            counter-increment: step-counter;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .faq-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .faq-list li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-bg);
+        }
+
+        .faq-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-list h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-list p {
+            color: var(--text-color);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    !-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="Gürün Belediyesi Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Başkan
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="baskan-ozgecmis.html">Özgeçmiş</a></li>
+                            <li><a class="dropdown-item" href="baskan-mesaj.html">Başkanın Mesajı</a></li>
+                            <li><a class="dropdown-item" href="baskan-galeri.html">Foto Galeri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Kurumsal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="kurumsal-yonetim.html">Yönetim</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-teskilat.html">Teşkilat Şeması</a></li>
+                            <li><a class="dropdown-item" href="kurumsal-mevzuat.html">Mevzuat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bilgi-kent.html">Kent Bilgisi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-rehber.html">Kent Rehberi</a></li>
+                            <li><a class="dropdown-item" href="bilgi-projeler.html">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="hizmet-online.html">Online İşlemler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-sosyal.html">Sosyal Hizmetler</a></li>
+                            <li><a class="dropdown-item" href="hizmet-yardim.html">Yardım Masası</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Gürün'ü Tanıyalım
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gurun-tarihce.html">Tarihçe</a></li>
+                            <li><a class="dropdown-item" href="gurun-turizm.html">Turizm</a></li>
+                            <li><a class="dropdown-item" href="gurun-kultur.html">Kültür</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-contact d-none d-lg-flex">
+                <a href="tel:4440058" class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    444 0 058
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık Bölümü -->
+    <section class="page-header" style="background-image: url('https://picsum.photos/1920/400?random=55');">
+        <div class="container">
+            <h1 data-aos="fade-up">Online Hizmetler</h1>
+            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item"><a href="#">Hizmetler</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Online Hizmetler</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Online Hizmetler İçeriği -->
+    <section class="online-services">
+        <div class="container">
+            <div class="row">
+                <!-- Sol Taraf - Hizmet Kutuları -->
+                <div class="col-lg-8">
+                    <div class="row">
+                        <!-- E-Belediye -->
+                        <div class="col-md-6" data-aos="fade-up">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h3>E-Belediye</h3>
+                                <p>Belediye hizmetlerine online erişim, borç sorgulama ve ödeme işlemleri için e-belediye sistemimizi kullanabilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    Sisteme Git <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Online Tahsilat -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <h3>Online Tahsilat</h3>
+                                <p>Vergi, harç ve diğer ödemelerinizi güvenli bir şekilde online olarak gerçekleştirebilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    Ödeme Yap <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Başvuru Takip -->
+                        <div class="col-md-6" data-aos="fade-up">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>Başvuru Takip</h3>
+                                <p>Belediyemize yapmış olduğunuz başvuruların durumunu online olarak takip edebilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    Başvuru Sorgula <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- E-İmar -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3>E-İmar</h3>
+                                <p>İmar durumu sorgulama ve ruhsat başvurularınızı online olarak gerçekleştirebilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    İmar Sorgula <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bilgi Edinme -->
+                        <div class="col-md-6" data-aos="fade-up">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <h3>Bilgi Edinme</h3>
+                                <p>4982 sayılı kanun kapsamında bilgi edinme başvurunuzu online olarak yapabilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    Başvuru Yap <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Mobil Belediye -->
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h3>Mobil Belediye</h3>
+                                <p>Belediye hizmetlerine mobil cihazınızdan erişmek için uygulamamızı indirebilirsiniz.</p>
+                                <a href="#" class="service-link">
+                                    Uygulamayı İndir <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ Taraf - Bilgi Kutuları -->
+                <div class="col-lg-4">
+                    <!-- Nasıl Kullanılır -->
+                    <div class="info-box" data-aos="fade-up">
+                        <h4>Nasıl Kullanılır?</h4>
+                        <ul class="step-list">
+                            <li>E-Belediye sistemine giriş yapın</li>
+                            <li>TC Kimlik numaranız ile üye olun</li>
+                            <li>Kullanmak istediğiniz hizmeti seçin</li>
+                            <li>Gerekli bilgileri doldurun</li>
+                            <li>İşleminizi tamamlayın</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sık Sorulan Sorular -->
+                    <div class="info-box" data-aos="fade-up">
+                        <h4>Sık Sorulan Sorular</h4>
+                        <ul class="faq-list">
+                            <li>
+                                <h5>E-Belediye şifremi unuttum, ne yapmalıyım?</h5>
+                                <p>TC Kimlik numaranız ile şifre sıfırlama işlemi yapabilirsiniz.</p>
+                            </li>
+                            <li>
+                                <h5>Online ödeme güvenli mi?</h5>
+                                <p>Tüm ödemeler SSL sertifikası ile güvenli bir şekilde gerçekleştirilmektedir.</p>
+                            </li>
+                            <li>
+                                <h5>Mobil uygulama hangi cihazlarda çalışır?</h5>
+                                <p>Uygulamamız iOS ve Android işletim sistemli tüm cihazlarda çalışmaktadır.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- İletişim -->
+                    <div class="info-box" data-aos="fade-up">
+                        <h4>Teknik Destek</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Telefon</strong>
+                                    <p>0346 715 XX XX</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>E-posta</strong>
+                                    <p>destek@gurun.bel.tr</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Çalışma Saatleri</strong>
+                                    <p>Hafta içi 08:00 - 17:00</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info">
+                        <img src="assets/images/logo-white.png" alt="Gürün Belediyesi Logo" class="footer-logo">
+                        <p>Gürün Belediyesi olarak halkımıza hizmet etmekten gurur duyuyoruz.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Hızlı Erişim</h4>
+                        <ul>
+                            <li><a href="#">E-Belediye</a></li>
+                            <li><a href="#">Bilgi Edinme</a></li>
+                            <li><a href="#">İhale İlanları</a></li>
+                            <li><a href="#">Projeler</a></li>
+                            <li><a href="#">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h4>İletişim Bilgileri</h4>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Gürün Belediyesi, Merkez Mahallesi
+                            Gürün/Sivas
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            0346 715 10 01
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            info@gurun.bel.tr
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    &copy; 2023 Gürün Belediyesi. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+         // Loader
+         window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader-wrapper').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loader-wrapper').style.display = 'none';
+                }, 300);
+            }, 2000);
+        });
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html> 
