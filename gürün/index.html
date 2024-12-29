@@ -4,153 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gürün Belediyesi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Loader -->
-    <div class="loader-wrapper">
-        <div class="loader"></div>
-    </div>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="Gürün Belediyesi Logo">
+                <img src="https://placehold.co/150x60" alt="Gürün Belediyesi Logo" class="nav-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
+                        <a class="nav-link" href="baskan.html">Başkan</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Başkan
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="baskan-ozgecmis.html">Özgeçmiş</a></li>
-                            <li><a class="dropdown-item" href="baskan-mesaj.html">Başkanın Mesajı</a></li>
-                            <li><a class="dropdown-item" href="baskan-galeri.html">Foto Galeri</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Kurumsal
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="kurumsal-yonetim.html">Yönetim</a></li>
-                            <li><a class="dropdown-item" href="kurumsal-teskilat.html">Teşkilat Şeması</a></li>
-                            <li><a class="dropdown-item" href="kurumsal-mevzuat.html">Mevzuat</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kurumsal.html">Kurumsal</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Bilgi
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="bilgi-kent.html">Kent Bilgisi</a></li>
-                            <li><a class="dropdown-item" href="bilgi-rehber.html">Kent Rehberi</a></li>
-                            <li><a class="dropdown-item" href="bilgi-projeler.html">Projeler</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Hizmetler
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="hizmet-online.html">Online İşlemler</a></li>
-                            <li><a class="dropdown-item" href="hizmet-sosyal.html">Sosyal Hizmetler</a></li>
-                            <li><a class="dropdown-item" href="hizmet-yardim.html">Yardım Masası</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Gürün'ü Tanıyalım
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="gurun-tarihce.html">Tarihçe</a></li>
-                            <li><a class="dropdown-item" href="gurun-turizm.html">Turizm</a></li>
-                            <li><a class="dropdown-item" href="gurun-kultur.html">Kültür</a></li>
+                        <ul class="dropdown-menu glass-dropdown">
+                            <li><a class="dropdown-item" href="haberler.html">Haberler</a></li>
+                            <li><a class="dropdown-item" href="duyurular.html">Duyurular</a></li>
+                            <li><a class="dropdown-item" href="ihaleler.html">İhaleler</a></li>
+                            <li><a class="dropdown-item" href="ilanlar.html">İlanlar</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                        <a class="nav-link" href="projeler.html">Proje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gurun.html">Gürün</a>
                     </li>
                 </ul>
-            </div>
-            <div class="navbar-contact d-none d-lg-flex">
-                <a href="tel:4440058" class="phone-number">
-                    <i class="fas fa-phone"></i>
-                    444 0 058
-                </a>
+                <div class="d-flex align-items-center">
+                    <a href="tel:4445858" class="phone-link me-3">
+                        <i class="fas fa-phone-volume"></i>
+                        444 5858
+                    </a>
+                    <form class="search-form">
+                        <input type="search" placeholder="Ara..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Ana Slider -->
-    <section class="main-slider">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://picsum.photos/1920/1080?random=1" alt="Gürün'e Hoş Geldiniz" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
-                    <div class="slide-content">
-                        <h2 data-aos="fade-up">Gürün'e Hoş Geldiniz</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Tarihi, kültürü ve doğal güzellikleriyle eşsiz bir şehir</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://picsum.photos/1920/1080?random=2" alt="Doğal Güzellikler" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
-                    <div class="slide-content">
-                        <h2 data-aos="fade-up">Doğal Güzellikler</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Gürün Kanyonu ve eşsiz doğal manzaralar</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://picsum.photos/1920/1080?random=3" alt="Gürün Şelalesi" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
-                    <div class="slide-content">
-                        <h2 data-aos="fade-up">Gürün Şelalesi</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Doğanın muhteşem eseri, şehrimizin incisi</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://picsum.photos/1920/1080?random=4" alt="Tarihi Zenginlikler" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
-                    <div class="slide-content">
-                        <h2 data-aos="fade-up">Tarihi Zenginlikler</h2>
-                        <p data-aos="fade-up" data-aos-delay="100">Antik kentler ve tarihi yapılarıyla zengin bir miras</p>
-                    </div>
+    <!-- Hero Slider -->
+    <div class="hero-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://placehold.co/1920x800" alt="Gürün 1">
+                <div class="slide-content">
+                    <h1>Gürün Belediyesi</h1>
+                    <p>Halkımızın Hizmetinde</p>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+                <img src="https://placehold.co/1920x800" alt="Gürün 2">
+                <div class="slide-content">
+                    <h1>Modern Şehircilik</h1>
+                    <p>Yaşanabilir Bir Gürün</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="https://placehold.co/1920x800" alt="Gürün 3">
+                <div class="slide-content">
+                    <h1>Sürdürülebilir Gelecek</h1>
+                    <p>Çevre Dostu Projeler</p>
+                </div>
+            </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 
-        <!-- Glass Effect Info Boxes -->
-        <div class="slider-info-container">
-            <div class="info-box glass-effect" data-aos="fade-up">
-                <i class="fas fa-newspaper"></i>
-                <h3>Haberler</h3>
-                <p>En güncel belediye haberleri</p>
-                <a href="#news" class="btn-more">Detaylar</a>
-            </div>
-            <div class="info-box glass-effect" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-bullhorn"></i>
-                <h3>Duyurular</h3>
-                <p>Önemli duyuru ve ilanlar</p>
-                <a href="#announcements" class="btn-more">Detaylar</a>
-            </div>
-            <div class="info-box glass-effect" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-calendar-alt"></i>
-                <h3>Etkinlikler</h3>
-                <p>Kültürel ve sosyal etkinlikler</p>
-                <a href="#events" class="btn-more">Detaylar</a>
+    <!-- Başkan Mesajı -->
+    <section class="baskan-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="baskan-image">
+                        <img src="https://placehold.co/400x500" alt="Naim Çiftçi" class="img-fluid rounded-lg">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="baskan-content">
+                        <h2>Başkanın Mesajı</h2>
+                        <h3>Naim Çiftçi</h3>
+                        <h4>Belediye Başkanı</h4>
+                        <p>Değerli Gürün halkı, sizlere daha iyi hizmet verebilmek için çalışmalarımıza aralıksız devam ediyoruz. Modern şehircilik anlayışıyla...</p>
+                        <a href="baskan.html" class="btn btn-outline-light">Devamını Oku</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -160,184 +118,144 @@
         <div class="container">
             <div class="row">
                 <!-- Haberler -->
-                <div class="col-lg-8" data-aos="fade-up">
-                    <div class="section-title text-start">
-                        <h2><i class="fas fa-newspaper"></i> Haberler</h2>
-                    </div>
-                    <div class="news-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="row news-row">
-                                        <!-- Haber 1 -->
-                                        <div class="col-md-6 news-col">
-                                            <div class="news-card">
-                                                <div class="news-image">
-                                                    <img src="https://picsum.photos/800/600?random=5" alt="Millet Bahçesi" style="width: 100%; height: 100%; object-fit: cover;">
-                                                    <div class="news-date">
-                                                        <span class="day">20</span>
-                                                        <span class="month">Ara</span>
-                                                    </div>
-                                                </div>
-                                                <div class="news-content">
-                                                    <h3>Millet Bahçesi Projesi</h3>
-                                                    <p>50.000 m²'lik alanda yapımına başlanan Millet Bahçesi projemiz hızla ilerliyor. Modern peyzaj düzenlemeleri ve sosyal alanlarıyla şehrimize değer katacak.</p>
-                                                    <a href="#" class="btn-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Haber 2 -->
-                                        <div class="col-md-6 news-col">
-                                            <div class="news-card">
-                                                <div class="news-image">
-                                                    <img src="https://picsum.photos/800/600?random=6" alt="Yol Çalışması" style="width: 100%; height: 100%; object-fit: cover;">
-                                                    <div class="news-date">
-                                                        <span class="day">19</span>
-                                                        <span class="month">Ara</span>
-                                                    </div>
-                                                </div>
-                                                <div class="news-content">
-                                                    <h3>Yol Yapım Çalışmaları</h3>
-                                                    <p>Şehir merkezinde başlattığımız yol yapım ve yenileme çalışmaları kapsamında 10 km'lik yol ağı yenileniyor. Çalışmalar hızla devam ediyor.</p>
-                                                    <a href="#" class="btn-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="row">
-                                        <!-- Haber 3 -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="news-card">
-                                                <div class="news-image">
-                                                    <img src="https://picsum.photos/800/600?random=7" alt="Kültür Merkezi">
-                                                    <div class="news-date">
-                                                        <span class="day">18</span>
-                                                        <span class="month">Ara</span>
-                                                    </div>
-                                                </div>
-                                                <div class="news-content">
-                                                    <h3>Kültür Merkezi İnşaatı</h3>
-                                                    <p>Modern k��ltür merkezimizin inşaatı planlandığı şekilde devam ediyor...</p>
-                                                    <a href="#" class="btn-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Haber 4 -->
-                                        <div class="col-md-6 mb-4">
-                                            <div class="news-card">
-                                                <div class="news-image">
-                                                    <img src="https://picsum.photos/800/600?random=8" alt="Park">
-                                                    <div class="news-date">
-                                                        <span class="day">17</span>
-                                                        <span class="month">Ara</span>
-                                                    </div>
-                                                </div>
-                                                <div class="news-content">
-                                                    <h3>Yeni Park Projesi</h3>
-                                                    <p>Mahallelerimize yeni parklar kazandırmaya devam ediyoruz...</p>
-                                                    <a href="#" class="btn-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Haberler</h2>
+                    <div class="news-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="news-card">
+                                    <img src="https://placehold.co/400x300" alt="Yeni Park Projesi">
+                                    <div class="news-content">
+                                        <span class="news-date">
+                                            <i class="far fa-calendar-alt"></i>
+                                            29 Aralık 2023
+                                        </span>
+                                        <h3>Yeni Park Projesi</h3>
+                                        <p>Gürün'e yeni bir park kazandırıyoruz. Modern oyun alanları, yürüyüş parkurları ve sosyal alanlarıyla...</p>
+                                        <a href="haber-detay.html" class="btn btn-primary">Devamını Oku</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper-slide">
+                                <div class="news-card">
+                                    <img src="https://placehold.co/400x300" alt="Altyapı Çalışmaları">
+                                    <div class="news-content">
+                                        <span class="news-date">
+                                            <i class="far fa-calendar-alt"></i>
+                                            28 Aralık 2023
+                                        </span>
+                                        <h3>Altyapı Çalışmaları Devam Ediyor</h3>
+                                        <p>Şehrimizin altyapısını yeniliyoruz. İçme suyu ve kanalizasyon hatlarında kapsamlı çalışmalar...</p>
+                                        <a href="haber-detay.html" class="btn btn-primary">Devamını Oku</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news-card">
+                                    <img src="https://placehold.co/400x300" alt="Kültür Merkezi">
+                                    <div class="news-content">
+                                        <span class="news-date">
+                                            <i class="far fa-calendar-alt"></i>
+                                            27 Aralık 2023
+                                        </span>
+                                        <h3>Kültür Merkezi İnşaatı Başladı</h3>
+                                        <p>Gürün'ün kültür hayatına yeni bir soluk getirecek modern kültür merkezi inşaatına başlandı...</p>
+                                        <a href="haber-detay.html" class="btn btn-primary">Devamını Oku</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
 
                 <!-- Duyurular -->
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6">
                     <div class="announcements-container">
-                        <!-- Güncel Duyurular -->
-                        <div class="announcement-section">
-                            <h3><i class="fas fa-bullhorn"></i> Güncel Duyurular</h3>
-                            <div class="announcement-scroll">
-                                <ul class="announcement-list">
-                                    <li>
-                                        <span class="date">20 Aralık</span>
-                                        <a href="#">Merkez Mahallesi Su Kesintisi Duyurusu (21.12.2023)</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">19 Aralık</span>
-                                        <a href="#">Kar Temizleme Çalışmaları Hakkında Bilgilendirme</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">18 Aralık</span>
-                                        <a href="#">2024 Yılı Emlak Vergisi Ödeme Takvimi</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">17 Aralık</span>
-                                        <a href="#">Yeni Yıl Etkinlikleri Programı</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">16 Aralık</span>
-                                        <a href="#">Belediye Hizmet Binası Taşınma Duyurusu</a>
-                                    </li>
-                                </ul>
+                        <div class="tab-container">
+                            <button class="tab-button active" data-tab="duyurular">
+                                <i class="fas fa-bullhorn me-2"></i>Güncel Duyurular
+                            </button>
+                            <button class="tab-button" data-tab="ilanlar">
+                                <i class="fas fa-clipboard-list me-2"></i>Güncel İlanlar
+                            </button>
+                            <button class="tab-button" data-tab="ihaleler">
+                                <i class="fas fa-gavel me-2"></i>Güncel İhaleler
+                            </button>
+                        </div>
+                        <div class="tab-content active" id="duyurular">
+                            <div class="announcement-list">
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        29 Aralık 2023
+                                    </div>
+                                    <h4>Su Kesintisi Duyurusu</h4>
+                                    <p>30 Aralık 2023 tarihinde 09:00-17:00 saatleri arasında bakım çalışmaları nedeniyle...</p>
+                                    <a href="duyuru-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        28 Aralık 2023
+                                    </div>
+                                    <h4>Halk Günü Toplantısı</h4>
+                                    <p>Belediye Başkanımız Sayın Naim Çiftçi, 2 Ocak 2024 tarihinde halk günü toplantısı düzenleyecektir...</p>
+                                    <a href="duyuru-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        27 Aralık 2023
+                                    </div>
+                                    <h4>Kar Temizleme Çalışmaları</h4>
+                                    <p>Belediyemiz ekipleri kar temizleme çalışmalarına aralıksız devam etmektedir...</p>
+                                    <a href="duyuru-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Güncel İhaleler -->
-                        <div class="announcement-section">
-                            <h3><i class="fas fa-gavel"></i> Güncel İhaleler</h3>
-                            <div class="announcement-scroll">
-                                <ul class="announcement-list">
-                                    <li>
-                                        <span class="date">22 Aralık</span>
-                                        <a href="#">Millet Bahçesi Yapım İşi İhalesi</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">25 Aralık</span>
-                                        <a href="#">2024 Yılı Asfalt Yapım İşi İhalesi</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">27 Aralık</span>
-                                        <a href="#">Park ve Bahçe Düzenleme İhalesi</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">29 Aralık</span>
-                                        <a href="#">Belediye Araç Alım İhalesi</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">30 Aralık</span>
-                                        <a href="#">Sokak Aydınlatma Sistemleri İhalesi</a>
-                                    </li>
-                                </ul>
+                        <div class="tab-content" id="ilanlar">
+                            <div class="announcement-list">
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        29 Aralık 2023
+                                    </div>
+                                    <h4>Zabıta Memuru Alımı</h4>
+                                    <p>Belediyemiz bünyesinde görevlendirilmek üzere 5 zabıta memuru alınacaktır...</p>
+                                    <a href="ilan-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        27 Aralık 2023
+                                    </div>
+                                    <h4>Kiralık İşyeri İlanı</h4>
+                                    <p>Belediyemize ait işyeri 2 yıllığına kiraya verilecektir...</p>
+                                    <a href="ilan-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Güncel İlanlar -->
-                        <div class="announcement-section">
-                            <h3><i class="fas fa-clipboard-list"></i> Güncel İlanlar</h3>
-                            <div class="announcement-scroll">
-                                <ul class="announcement-list">
-                                    <li>
-                                        <span class="date">21 Aralık</span>
-                                        <a href="#">Zabıta Memuru Alım İlanı (5 Kişi)</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">23 Aralık</span>
-                                        <a href="#">Belediye İşyeri Kiralama İlanı</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">24 Aralık</span>
-                                        <a href="#">Sosyal Yardım Başvuru Duyurusu</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">26 Aralık</span>
-                                        <a href="#">Temizlik Görevlisi Alım İlanı</a>
-                                    </li>
-                                    <li>
-                                        <span class="date">28 Aralık</span>
-                                        <a href="#">Spor Tesisi İşletme İhalesi</a>
-                                    </li>
-                                </ul>
+                        <div class="tab-content" id="ihaleler">
+                            <div class="announcement-list">
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        28 Aralık 2023
+                                    </div>
+                                    <h4>Yol Yapım İhalesi</h4>
+                                    <p>10 km asfalt yol yapım işi ihalesi 15 Ocak 2024 tarihinde yapılacaktır...</p>
+                                    <a href="ihale-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
+                                <div class="announcement-item">
+                                    <div class="announcement-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        26 Aralık 2023
+                                    </div>
+                                    <h4>Park Yapım İhalesi</h4>
+                                    <p>Merkez Mahallesi'nde yapılacak park için ihale 20 Ocak 2024 tarihinde...</p>
+                                    <a href="ihale-detay.html" class="btn btn-sm btn-outline-primary">Detaylar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -347,366 +265,247 @@
     </section>
 
     <!-- Projeler ve Rakamlarla Gürün -->
-    <section class="projects-stats-section">
+    <section class="projects-stats glass-bg">
         <div class="container">
-            <!-- Projeler -->
-            <div class="section-title" data-aos="fade-up">
-                <h2>Projelerimiz</h2>
-                <p>Gürün için hayata geçirdiğimiz ve planladığımız projeler</p>
-            </div>
-            <div class="row">
-                <!-- Proje 1 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/millet-bahcesi.jpg" alt="Millet Bahçesi">
+            <!-- Projeler Slider -->
+            <div class="projects-slider swiper">
+                <h2 class="section-title">Projelerimiz</h2>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="https://placehold.co/600x400" alt="Kültür Merkezi">
+                            <div class="project-content">
+                                <h3>Modern Kültür Merkezi</h3>
+                                <p>1000 kişilik çok amaçlı salon, sergi alanları ve atölyeler...</p>
+                                <div class="project-status">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 75%">75%</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-content">
-                            <h3>Millet Bahçesi</h3>
-                            <p>50.000 m² alan üzerine kurulu, içerisinde spor alanları, yürüyüş parkurları, çocuk oyun alanları ve sosyal tesisler bulunan modern bir yaşam alanı...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Ocak 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="https://placehold.co/600x400" alt="Spor Kompleksi">
+                            <div class="project-content">
+                                <h3>Spor Kompleksi</h3>
+                                <p>Kapalı spor salonu, yüzme havuzu ve fitness merkezi...</p>
+                                <div class="project-status">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 45%">45%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <img src="https://placehold.co/600x400" alt="Kent Meydanı">
+                            <div class="project-content">
+                                <h3>Yeni Kent Meydanı</h3>
+                                <p>Modern kent meydanı, yeşil alanlar ve sosyal tesisler...</p>
+                                <div class="project-status">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 30%">30%</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Proje 2 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/spor-kompleksi.jpg" alt="Spor Kompleksi">
-                        </div>
-                        <div class="project-content">
-                            <h3>Kapalı Spor Kompleksi</h3>
-                            <p>2000 kişilik tribün kapasitesi, fitness salonu, yüzme havuzu ve çok amaçlı spor salonları ile modern bir spor tesisi...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Mart 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proje 3 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/kultur-merkezi.jpg" alt="Kültür Merkezi">
-                        </div>
-                        <div class="project-content">
-                            <h3>Kültür ve Sanat Merkezi</h3>
-                            <p>500 kişilik çok amaçlı salon, sergi alanları, kütüphane ve sanat atölyeleri ile kültür sanat merkezi...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Nisan 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proje 4 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/sosyal-konutlar.jpg" alt="Sosyal Konutlar">
-                        </div>
-                        <div class="project-content">
-                            <h3>Sosyal Konutlar</h3>
-                            <p>200 ailelik modern yaşam alanı, yeşil alanlar, otopark ve sosyal donatılarla tam donanımlı konut projesi...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Mayıs 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proje 5 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/kent-meydani.jpg" alt="Kent Meydanı">
-                        </div>
-                        <div class="project-content">
-                            <h3>Kent Meydanı</h3>
-                            <p>10.000 m²'lik alan üzerine kurulu, modern peyzaj düzenlemesi, oturma alanları ve etkinlik meydanı...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Haziran 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proje 6 -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://raw.githubusercontent.com/hsnyc/gurun/main/assets/images/projects/cocuk-parklari.jpg" alt="Çocuk Parkları">
-                        </div>
-                        <div class="project-content">
-                            <h3>Çocuk Oyun Parkları</h3>
-                            <p>Her mahalleye modern çocuk parkları, güvenli oyun alanları ve spor ekipmanları...</p>
-                            <div class="project-meta">
-                                <span><i class="fas fa-calendar-alt"></i> Başlangıç: Temmuz 2024</span>
-                                <a href="#" class="btn-more">Detaylar <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
 
             <!-- Rakamlarla Gürün -->
-            <div class="stats-section mt-5">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Rakamlarla Gürün</h2>
-                    <p>Şehrimizin gelişimini gösteren istatistikler</p>
+            <div class="stats-container mt-5">
+                <h2 class="section-title">Rakamlarla Gürün</h2>
+                <div class="row stats-row">
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <i class="fas fa-users-line"></i>
+                            <h3>Nüfus</h3>
+                            <p class="counter" data-target="20000">0</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <i class="fas fa-road-circle-check"></i>
+                            <h3>Yol Çalışması</h3>
+                            <p class="counter" data-target="150">0</p>
+                            <span>km</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <i class="fas fa-city"></i>
+                            <h3>Sosyal Tesis</h3>
+                            <p class="counter" data-target="12">0</p>
+                            <span>adet</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <i class="fas fa-tree-city"></i>
+                            <h3>Park Alanı</h3>
+                            <p class="counter" data-target="25">0</p>
+                            <span>adet</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Etkinlikler -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title">Etkinlikler</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="calendar">
+                        <!-- Takvim içeriği buraya gelecek -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="events-list">
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">30</span>
+                                <span class="month">Aralık</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Yılbaşı Konseri</h4>
+                                <p>Gürün Belediyesi Kültür Merkezi</p>
+                                <span class="event-time"><i class="far fa-clock"></i> 20:00</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">2</span>
+                                <span class="month">Ocak</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Halk Günü Toplantısı</h4>
+                                <p>Belediye Meclis Salonu</p>
+                                <span class="event-time"><i class="far fa-clock"></i> 14:00</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">
+                                <span class="day">5</span>
+                                <span class="month">Ocak</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Çocuk Tiyatrosu</h4>
+                                <p>Gürün Belediyesi Kültür Merkezi</p>
+                                <span class="event-time"><i class="far fa-clock"></i> 15:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gürün Tanıtım -->
+    <section class="gurun-section">
+        <div class="container">
+            <div class="gurun-content">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                        <div class="stat-card">
-                            <i class="fas fa-users"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">20147</h3>
-                                <p>Nüfus</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-8">
+                        <h2><i class="fas fa-landmark me-2"></i>Gürün</h2>
+                        <p>Sivas'ın incisi Gürün, tarihi İpek Yolu üzerinde yer alan, doğal güzellikleri ve zengin kültürel mirasıyla öne çıkan bir ilçemizdir. Göksu Nehri'nin bereketli vadisinde kurulu olan ilçemiz, Tohma Çayı'nın eşsiz kanyonları, şifalı kaplıcaları ve tarihi konakları ile ziyaretçilerini büyülemektedir.</p>
+                        <p>Binlerce yıllık tarihi, misafirperver insanları ve el değmemiş doğasıyla Gürün, her mevsim farklı güzellikler sunmaktadır. Modern şehircilik anlayışıyla gelişirken, geleneksel dokusunu korumaya devam eden ilçemiz, sürdürülebilir turizm ve tarım potansiyeliyle geleceğe emin adımlarla yürümektedir.</p>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-card">
-                            <i class="fas fa-project-diagram"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">45</h3>
-                                <p>Devam Eden Proje</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-card">
-                            <i class="fas fa-hand-holding-heart"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">2500</h3>
-                                <p>Sosyal Yardım</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-card">
-                            <i class="fas fa-road"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">250</h3>
-                                <p>KM Yol Yapımı</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                        <div class="stat-card">
-                            <i class="fas fa-user-tie"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">350</h3>
-                                <p>Çalışan Sayısı</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-card">
-                            <i class="fas fa-tree"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">25</h3>
-                                <p>Park Sayısı</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-card">
-                            <i class="fas fa-building"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">15</h3>
-                                <p>Sosyal Tesis</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-card">
-                            <i class="fas fa-car"></i>
-                            <div class="stat-content">
-                                <h3 class="counter">75</h3>
-                                <p>Araç Filosu</p>
-                            </div>
-                        </div>
+                    <div class="col-lg-4">
+                        <img src="https://placehold.co/400x300" alt="Gürün Manzara" class="img-fluid rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Başkan Bölümü -->
-    <section class="mayor-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="mayor-image">
-                        <img src="https://picsum.photos/800/1000?random=1" alt="Belediye Başkanı">
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="mayor-content">
-                        <h2>Belediye Başkanı</h2>
-                        <h3>Nami ÇINAR</h3>
-                        <div class="mayor-quote">
-                            "Gürün'ü hep birlikte daha güzel yarınlara taşıyacağız."
-                        </div>
-                        <p>Değerli Gürün halkı, sizlere hizmet etmekten onur duyuyorum. Şehrimizi modern ve yaşanabilir bir kent haline getirmek için var gücümüzle çalışıyoruz.</p>
-                        <a href="baskan-ozgecmis.html" class="btn btn-primary">Özgeçmiş</a>
-                        <a href="baskan-mesaj.html" class="btn btn-outline-primary">Başkanın Mesajı</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gürün'ü Tanıyalım -->
-    <section class="discover-section">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Gürün'ü Tanıyalım</h2>
-                <p>Tarihi, kültürü ve doğal güzellikleriyle şehrimiz</p>
-            </div>
-            <div class="discover-slider" data-aos="fade-up">
-                <div class="swiper">
+            <div class="gurun-rehber">
+                <h3><i class="fas fa-compass me-2"></i>Gürün Rehberi</h3>
+                <div class="rehber-slider swiper">
                     <div class="swiper-wrapper">
-                        <!-- Gökpınar Gölü -->
                         <div class="swiper-slide">
-                            <div class="discover-card">
-                                <img src="https://picsum.photos/800/600?random=10" alt="Gökpınar Gölü">
-                                <div class="discover-content">
-                                    <h3>Gökpınar Gölü</h3>
-                                    <p>Dünyanın en berrak sularından birine sahip, eşsiz doğal güzelliğiyle ünlü gölümüz...</p>
+                            <a href="gurun.html" class="rehber-slide">
+                                <img src="https://placehold.co/800x600" alt="Gökpınar Gölü">
+                                <div class="rehber-caption">
+                                    <h4>Gökpınar Gölü</h4>
+                                    <p>Dünyanın en berrak sularından birine sahip doğa harikası</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Tarihi Yerler -->
                         <div class="swiper-slide">
-                            <div class="discover-card">
-                                <img src="https://picsum.photos/800/600?random=11" alt="Tarihi Yerler">
-                                <div class="discover-content">
-                                    <h3>Tarihi Yerler</h3>
-                                    <p>Suçatı Köprüsü, tarihi camiler, konaklar ve geleneksel Gürün evleri...</p>
+                            <a href="gurun.html" class="rehber-slide">
+                                <img src="https://placehold.co/800x600" alt="Tohma Kanyonu">
+                                <div class="rehber-caption">
+                                    <h4>Tohma Kanyonu</h4>
+                                    <p>Eşsiz manzarası ve doğal güzellikleriyle büyüleyen kanyon</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Doğal Güzellikler -->
                         <div class="swiper-slide">
-                            <div class="discover-card">
-                                <img src="https://picsum.photos/800/600?random=12" alt="Doğal Güzellikler">
-                                <div class="discover-content">
-                                    <h3>Doğal Güzellikler</h3>
-                                    <p>Şuğul Vadisi, kanyonlar, şelaleler ve eşsiz doğa manzaraları...</p>
+                            <a href="gurun.html" class="rehber-slide">
+                                <img src="https://placehold.co/800x600" alt="Tarihi Konaklar">
+                                <div class="rehber-caption">
+                                    <h4>Tarihi Konaklar</h4>
+                                    <p>Osmanlı döneminden kalma restore edilmiş tarihi yapılar</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Kültürel Miras -->
                         <div class="swiper-slide">
-                            <div class="discover-card">
-                                <img src="https://picsum.photos/800/600?random=13" alt="Kültürel Miras">
-                                <div class="discover-content">
-                                    <h3>Kültürel Miras</h3>
-                                    <p>Zengin mutfak kültürü, el sanatları ve geleneksel festivaller...</p>
+                            <a href="gurun.html" class="rehber-slide">
+                                <img src="https://placehold.co/800x600" alt="Şuğul Vadisi">
+                                <div class="rehber-caption">
+                                    <h4>Şuğul Vadisi</h4>
+                                    <p>Doğa sporları ve trekking için ideal rota</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer-info">
-                        <img src="assets/images/logo-white.png" alt="Gürün Belediyesi Logo" class="footer-logo">
-                        <p>Gürün Belediyesi olarak halkımıza hizmet etmekten gurur duyuyoruz.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
+                <div class="col-md-4">
+                    <h4>İletişim</h4>
+                    <p>Adres: Gürün Belediyesi, Sivas</p>
+                    <p>Telefon: 444 5858</p>
+                    <p>E-posta: info@gurun.bel.tr</p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h4>Hızlı Erişim</h4>
-                        <ul>
-                            <li><a href="#">E-Belediye</a></li>
-                            <li><a href="#">Bilgi Edinme</a></li>
-                            <li><a href="#">İhale İlanları</a></li>
-                            <li><a href="#">Projeler</a></li>
-                            <li><a href="#">İletişim</a></li>
-                        </ul>
-                    </div>
+                <div class="col-md-4">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#">E-Belediye</a></li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#">İhaleler</a></li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="footer-contact">
-                        <h4>İletişim Bilgileri</h4>
-                        <p>
-                            <i class="fas fa-map-marker-alt"></i>
-                            Gürün Belediyesi, Merkez Mahallesi
-                            Gürün/Sivas
-                        </p>
-                        <p>
-                            <i class="fas fa-phone"></i>
-                            0346 715 10 01
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            info@gurun.bel.tr
-                        </p>
+                <div class="col-md-4">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="copyright">
-                    &copy; 2023 Gürün Belediyesi. Tüm hakları saklıdır.
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // Loader
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.querySelector('.loader-wrapper').style.opacity = '0';
-                setTimeout(function() {
-                    document.querySelector('.loader-wrapper').style.display = 'none';
-                }, 300);
-            }, 2000);
-        });
-
-        // Navbar Scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // AOS Init
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
-</html>
+</html> 

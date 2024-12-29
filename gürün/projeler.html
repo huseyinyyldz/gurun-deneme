@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz - Gürün Belediyesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://placehold.co/150x60" alt="Gürün Belediyesi Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="baskan.html">Başkan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kurumsal.html">Kurumsal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu glass-dropdown">
+                            <li><a class="dropdown-item" href="haberler.html">Haberler</a></li>
+                            <li><a class="dropdown-item" href="duyurular.html">Duyurular</a></li>
+                            <li><a class="dropdown-item" href="ihaleler.html">İhaleler</a></li>
+                            <li><a class="dropdown-item" href="ilanlar.html">İlanlar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projeler.html">Proje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gurun.html">Gürün</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="tel:4445858" class="phone-link me-3">
+                        <i class="fas fa-phone-volume"></i>
+                        444 5858
+                    </a>
+                    <form class="search-form">
+                        <input type="search" placeholder="Ara..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sayfa Başlığı -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Projelerimiz</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active">Projeler</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Proje Kategorileri -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Tümü</button>
+                <button class="category-btn" data-category="devam-eden">Devam Eden</button>
+                <button class="category-btn" data-category="tamamlanan">Tamamlanan</button>
+                <button class="category-btn" data-category="planlanan">Planlanan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devam Eden Projeler -->
+    <section class="projects-section" id="devam-eden">
+        <div class="container">
+            <h2 class="section-title">Devam Eden Projeler</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Kültür Merkezi">
+                            <div class="project-status-badge ongoing">
+                                <i class="fas fa-clock"></i> Devam Ediyor
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Modern Kültür Merkezi</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Başlangıç: Ocak 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Tahmini Bitiş: Aralık 2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Bütçe: 50 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>1000 kişilik çok amaçlı salon, sergi alanları, atölyeler ve modern teknoloji altyapısıyla donatılmış kültür merkezi projesi. Şehrimizin kültür ve sanat hayatına yeni bir soluk getirecek.</p>
+                            <div class="project-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 75%">75%</div>
+                                </div>
+                                <span class="progress-text">Proje İlerlemesi</span>
+                            </div>
+                            <div class="project-gallery">
+                                <img src="https://placehold.co/150x100" alt="Detay 1">
+                                <img src="https://placehold.co/150x100" alt="Detay 2">
+                                <img src="https://placehold.co/150x100" alt="Detay 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Spor Kompleksi">
+                            <div class="project-status-badge ongoing">
+                                <i class="fas fa-clock"></i> Devam Ediyor
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Spor Kompleksi</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Başlangıç: Mart 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Tahmini Bitiş: Haziran 2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Bütçe: 35 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>Kapalı spor salonu, yarı olimpik yüzme havuzu, fitness merkezi ve çok amaçlı spor alanlarından oluşan modern spor kompleksi. Gençlerimizin ve tüm vatandaşlarımızın spor ihtiyaçlarını karşılayacak.</p>
+                            <div class="project-progress">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 45%">45%</div>
+                                </div>
+                                <span class="progress-text">Proje İlerlemesi</span>
+                            </div>
+                            <div class="project-gallery">
+                                <img src="https://placehold.co/150x100" alt="Detay 1">
+                                <img src="https://placehold.co/150x100" alt="Detay 2">
+                                <img src="https://placehold.co/150x100" alt="Detay 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tamamlanan Projeler -->
+    <section class="projects-section bg-light" id="tamamlanan">
+        <div class="container">
+            <h2 class="section-title">Tamamlanan Projeler</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Meydan Düzenlemesi">
+                            <div class="project-status-badge completed">
+                                <i class="fas fa-check"></i> Tamamlandı
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Kent Meydanı Düzenlemesi</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Tamamlanma: Kasım 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Yatırım: 20 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>Modern kent meydanı düzenlemesi ile şehir merkezimiz yeni bir görünüme kavuştu. Yeşil alanlar, oturma grupları ve süs havuzları ile vatandaşlarımızın keyifli vakit geçirebileceği bir yaşam alanı oluşturuldu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Çocuk Parkı">
+                            <div class="project-status-badge completed">
+                                <i class="fas fa-check"></i> Tamamlandı
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Çocuk Parkı ve Yeşil Alan</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Tamamlanma: Ekim 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Yatırım: 5 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>Modern oyun grupları, güvenli zemin kaplaması ve yeşil alanlarıyla çocuklarımız için güvenli bir oyun alanı oluşturuldu.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Yol Çalışması">
+                            <div class="project-status-badge completed">
+                                <i class="fas fa-check"></i> Tamamlandı
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Ana Arter Yol Düzenlemesi</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Tamamlanma: Eylül 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Yatırım: 15 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>Şehir merkezindeki ana arterlerde yol genişletme, kaldırım düzenlemesi ve altyapı yenileme çalışmaları tamamlandı.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planlanan Projeler -->
+    <section class="projects-section" id="planlanan">
+        <div class="container">
+            <h2 class="section-title">Planlanan Projeler</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Millet Bahçesi">
+                            <div class="project-status-badge planned">
+                                <i class="fas fa-lightbulb"></i> Planlanan
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Millet Bahçesi</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Planlanan Başlangıç: 2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Tahmini Bütçe: 40 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>100 dönüm alan üzerine kurulacak millet bahçesi projesi ile şehrimize büyük bir yeşil alan kazandırılacak. İçerisinde yürüyüş parkurları, bisiklet yolları, spor alanları ve sosyal tesisler yer alacak.</p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-tree"></i>
+                                    <span>10.000 Ağaç</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-road"></i>
+                                    <span>5 km Yürüyüş Yolu</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bicycle"></i>
+                                    <span>3 km Bisiklet Yolu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card-detailed">
+                        <div class="project-image">
+                            <img src="https://placehold.co/800x500" alt="Güneş Enerjisi">
+                            <div class="project-status-badge planned">
+                                <i class="fas fa-lightbulb"></i> Planlanan
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Güneş Enerjisi Santrali</h3>
+                            <div class="project-info">
+                                <div class="info-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Planlanan Başlangıç: 2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Tahmini Bütçe: 25 Milyon TL</span>
+                                </div>
+                            </div>
+                            <p>Belediye tesislerinin elektrik ihtiyacını karşılamak üzere 5 MW kapasiteli güneş enerjisi santrali kurulması planlanıyor. Proje ile yıllık 7.500.000 kWh elektrik üretimi hedefleniyor.</p>
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-solar-panel"></i>
+                                    <span>15.000 Panel</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Çevre Dostu</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>5 MW Güç</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proje İstatistikleri -->
+    <section class="project-stats bg-light">
+        <div class="container">
+            <h2 class="section-title">Proje İstatistikleri</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Devam Eden</h3>
+                        <p class="counter">12</p>
+                        <span>Proje</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Tamamlanan</h3>
+                        <p class="counter">45</p>
+                        <span>Proje</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Planlanan</h3>
+                        <p class="counter">8</p>
+                        <span>Proje</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Toplam Yatırım</h3>
+                        <p class="counter">350</p>
+                        <span>Milyon TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Adres: Gürün Belediyesi, Sivas</p>
+                    <p><i class="fas fa-phone me-2"></i>Telefon: 444 5858</p>
+                    <p><i class="fas fa-envelope me-2"></i>E-posta: info@gurun.bel.tr</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>E-Belediye</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Projeler</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>İhaleler</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Duyurular</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter mt-4">
+                        <h5>E-Bülten</h5>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                                <button class="btn btn-primary" type="submit">Abone Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2023 Gürün Belediyesi. Tüm hakları saklıdır.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Gizlilik Politikası</a></li>
+                            <li><a href="#">Kullanım Şartları</a></li>
+                            <li><a href="#">Site Haritası</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // Kategori Filtreleme
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Aktif buton stilini değiştir
+                document.querySelector('.category-btn.active').classList.remove('active');
+                this.classList.add('active');
+
+                // Seçilen kategoriye göre projeleri filtrele
+                const category = this.getAttribute('data-category');
+                const sections = document.querySelectorAll('.projects-section');
+
+                if (category === 'all') {
+                    sections.forEach(section => section.style.display = 'block');
+                } else {
+                    sections.forEach(section => {
+                        if (section.id === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Sayaç Animasyonu
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            counter.setAttribute('data-target', counter.innerText);
+            updateCount();
+        });
+    </script>
+</body>
+</html> 

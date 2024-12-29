@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal - Gürün Belediyesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://placehold.co/150x60" alt="Gürün Belediyesi Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="baskan.html">Başkan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kurumsal.html">Kurumsal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bilgi
+                        </a>
+                        <ul class="dropdown-menu glass-dropdown">
+                            <li><a class="dropdown-item" href="haberler.html">Haberler</a></li>
+                            <li><a class="dropdown-item" href="duyurular.html">Duyurular</a></li>
+                            <li><a class="dropdown-item" href="ihaleler.html">İhaleler</a></li>
+                            <li><a class="dropdown-item" href="ilanlar.html">İlanlar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projeler.html">Proje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gurun.html">Gürün</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a href="tel:4445858" class="phone-link me-3">
+                        <i class="fas fa-phone-volume"></i>
+                        444 5858
+                    </a>
+                    <form class="search-form">
+                        <input type="search" placeholder="Ara..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sayfa Başlığı -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kurumsal</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active">Kurumsal</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Misyon ve Vizyon -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2>Misyonumuz</h2>
+                        <p>Gürün'ün tarihi ve kültürel mirasını koruyarak, modern şehircilik anlayışıyla sürdürülebilir kalkınmayı sağlamak, vatandaşlarımızın yaşam kalitesini yükseltmek ve gelecek nesillere yaşanabilir bir kent bırakmak için çalışmak.</p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Şeffaf ve hesap verebilir yönetim</li>
+                            <li><i class="fas fa-check"></i> Katılımcı belediyecilik</li>
+                            <li><i class="fas fa-check"></i> Sürdürülebilir kentsel gelişim</li>
+                            <li><i class="fas fa-check"></i> Sosyal belediyecilik</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="vision-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2>Vizyonumuz</h2>
+                        <p>Tarihi, kültürel ve doğal zenginlikleriyle örnek bir turizm kenti; modern altyapısı, planlı kentleşmesi ve yüksek yaşam kalitesiyle tercih edilen bir yerleşim merkezi; yenilikçi projeleri ve katılımcı yönetimiyle öncü bir belediye olmak.</p>
+                        <ul class="vision-list">
+                            <li><i class="fas fa-arrow-right"></i> Yaşanabilir ve modern bir kent</li>
+                            <li><i class="fas fa-arrow-right"></i> Güçlü ekonomi ve istihdam</li>
+                            <li><i class="fas fa-arrow-right"></i> Çevre dostu projeler</li>
+                            <li><i class="fas fa-arrow-right"></i> Kültür ve sanat merkezi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yönetim -->
+    <section class="management bg-light">
+        <div class="container">
+            <h2 class="section-title">Belediye Meclisi</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="member-card">
+                        <img src="https://placehold.co/400x500" alt="Meclis Üyesi">
+                        <div class="member-info">
+                            <h3>Ahmet Yılmaz</h3>
+                            <p>Meclis Üyesi</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="member-card">
+                        <img src="https://placehold.co/400x500" alt="Meclis Üyesi">
+                        <div class="member-info">
+                            <h3>Mehmet Demir</h3>
+                            <p>Meclis Üyesi</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="member-card">
+                        <img src="https://placehold.co/400x500" alt="Meclis Üyesi">
+                        <div class="member-info">
+                            <h3>Ayşe Kaya</h3>
+                            <p>Meclis Üyesi</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="member-card">
+                        <img src="https://placehold.co/400x500" alt="Meclis Üyesi">
+                        <div class="member-info">
+                            <h3>Fatma Şahin</h3>
+                            <p>Meclis Üyesi</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizasyon Şeması -->
+    <section class="organization">
+        <div class="container">
+            <h2 class="section-title">Organizasyon Şeması</h2>
+            <div class="org-chart">
+                <!-- Üst Yönetim -->
+                <div class="org-level-1">
+                    <div class="org-box">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Belediye Başkanı</h3>
+                        <p>Naim Çiftçi</p>
+                    </div>
+                </div>
+                <!-- Başkan Yardımcıları -->
+                <div class="org-level-2">
+                    <div class="org-box">
+                        <i class="fas fa-user"></i>
+                        <h4>Başkan Yardımcısı</h4>
+                        <p>Teknik İşler</p>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-user"></i>
+                        <h4>Başkan Yardımcısı</h4>
+                        <p>Mali İşler</p>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-user"></i>
+                        <h4>Başkan Yardımcısı</h4>
+                        <p>Sosyal İşler</p>
+                    </div>
+                </div>
+                <!-- Müdürlükler -->
+                <div class="org-level-3">
+                    <div class="org-box">
+                        <i class="fas fa-building"></i>
+                        <h5>Fen İşleri Müdürlüğü</h5>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-coins"></i>
+                        <h5>Mali Hizmetler Müdürlüğü</h5>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-city"></i>
+                        <h5>İmar Müdürlüğü</h5>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-hands-helping"></i>
+                        <h5>Sosyal Yardım İşleri Müdürlüğü</h5>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-leaf"></i>
+                        <h5>Park ve Bahçeler Müdürlüğü</h5>
+                    </div>
+                    <div class="org-box">
+                        <i class="fas fa-broom"></i>
+                        <h5>Temizlik İşleri Müdürlüğü</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kurumsal Değerler -->
+    <section class="values bg-light">
+        <div class="container">
+            <h2 class="section-title">Kurumsal Değerlerimiz</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Güvenilirlik</h3>
+                        <p>Şeffaf ve hesap verebilir yönetim anlayışıyla, vatandaşlarımızın güvenini kazanmak ve korumak en önemli değerlerimizdendir.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Katılımcılık</h3>
+                        <p>Vatandaşlarımızın yönetime katılımını sağlayarak, ortak akıl ile şehrimizi yönetmeyi hedefliyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Sosyal Sorumluluk</h3>
+                        <p>Toplumun tüm kesimlerinin ihtiyaçlarını gözeterek, sosyal belediyecilik anlayışıyla hizmet veriyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>İletişim</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Adres: Gürün Belediyesi, Sivas</p>
+                    <p><i class="fas fa-phone me-2"></i>Telefon: 444 5858</p>
+                    <p><i class="fas fa-envelope me-2"></i>E-posta: info@gurun.bel.tr</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>E-Belediye</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Projeler</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>İhaleler</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right me-2"></i>Duyurular</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter mt-4">
+                        <h5>E-Bülten</h5>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                                <button class="btn btn-primary" type="submit">Abone Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2023 Gürün Belediyesi. Tüm hakları saklıdır.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-bottom-links">
+                            <li><a href="#">Gizlilik Politikası</a></li>
+                            <li><a href="#">Kullanım Şartları</a></li>
+                            <li><a href="#">Site Haritası</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 
